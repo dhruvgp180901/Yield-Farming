@@ -43,7 +43,7 @@ contract DecentralBank {
     function unstakeTokens() public {
         uint256 balance = stakingBalance[msg.sender];
 
-        require(balance > 0, "staking balance should be gretaer than zero");
+        require(balance > 0, "staking balance should be greater than zero");
 
         //transfer token to specified contract adress from Bank
         tether.transfer(msg.sender, balance);
